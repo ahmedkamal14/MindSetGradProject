@@ -62,6 +62,7 @@ const productsSlice = createSlice({
       })
       .addCase(fetchAllProducts.fulfilled, (state, action) => {
         state.items = action.payload;
+        state.selectedItems = action.payload;
         state.isLoading = false;
       })
       .addCase(fetchAllProducts.rejected, (state, action) => {
