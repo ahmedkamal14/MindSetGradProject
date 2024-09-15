@@ -1,8 +1,12 @@
 import Header from "@/Components/Header";
+import NewSletter from "@/Components/Home/NewSletter";
 
 const Home = () => {
   return(
-    <Header />
+    <>
+      <Header />
+      <NewSletter/>
+    </>
   )
 };
 

@@ -50,16 +50,21 @@ const Header = () => {
         <div className="flex justify-center space-x-6 text-white mt-3 text-[32px]">
           <div className='relative'>
             <div className='w-[20px] h-[20px] bg-slate-200 rounded-full text-[12px] text-center absolute -top-[4px] left-[16px] text-[#1B6392] flex items-center justify-center p-1' p-1>2</div>
-            <a href="." className=''><FaCartShopping/></a>
+            {/* cart */}
+            <button className=''><FaCartShopping/></button>
           </div>
-          <a href="."><img src="./Heart.png" alt="" /></a>
-          <a href="."><img src="./User.png" alt="" /></a>
+          {/* heart */}
+          <button><img src="./Heart.png" alt="" /></button>
+          {/* user */}
+          <button><img src="./User.png" alt="" /></button>
         </div>
       </div>
       {/* bottom */}
       <div className="flex flex-col md:flex-row justify-evenly align-center mt-3 border-b-2">
-        <div className="flex p-1 space-x-3 justify-between max-w-[695px] flex-col md:flex-row md:justify-center">
+        <div className="flex p-1 space-x-3 justify-between max-w-[695px] flex-col md:flex-row md:justify-center relative">
+          {/* category */}
           <button className='flex bg-[#F2F4F5] p-3 justify-center w-full md:w-[154px]'>All category  <span><FaChevronDown className="ml-1 mt-1" /></span></button>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 justify-items-center">
             <a href="." className='flex font-public-sans text-[14px] font-normal leading-[20px] text-[#5F6C72] mt-2 space-x-1'>
               <FaLocationDot className='text-[24px]'/> 
