@@ -1,13 +1,11 @@
-import Header from "@/Components/Header";
 import NewSletter from "@/Components/Home/NewSletter";
 
 const Home = () => {
-  return(
+  return (
     <>
-      <Header />
-      <NewSletter/>
+      <NewSletter />
     </>
-  )
+  );
 };
 
 export default Home;

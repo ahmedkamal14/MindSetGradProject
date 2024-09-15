@@ -1,98 +1,167 @@
-import { FaTwitter, FaFacebook, FaYoutube, FaInstagram, FaReddit, FaPinterest , FaChevronDown , FaCartShopping , FaLocationDot, FaArrowsRotate, FaEye, FaHeadphones, FaInfo ,  FaPhone} from 'react-icons/fa6';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import {
+  FaTwitter,
+  FaFacebook,
+  FaYoutube,
+  FaInstagram,
+  FaReddit,
+  FaPinterest,
+  FaChevronDown,
+  FaMapMarkerAlt,
+  FaSyncAlt,
+  FaHeadphonesAlt,
+  FaInfoCircle,
+  FaPhoneAlt,
+  FaSearch,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { BsCart3 } from "react-icons/bs";
+import { IoMdHeartEmpty } from "react-icons/io";
+import { AiOutlineUser } from "react-icons/ai";
+import { PiWarningCircleBold } from "react-icons/pi";
 
 const Header = () => {
   return (
-    <div className="flex flex-col w-full text-center">
+    <div className="bg-[#1B6392]">
       {/* top */}
-      <div className="flex flex-col md:flex-row justify-around align-center space-y-2 bg-[#1B6392] p-6 font-public-sans text-[14px] text-white">
-        <p className='mt-1'>Welcome to Clicon online eCommerce store. </p>
-          <div className='flex flex-col md:flex-row'>
-            <div className='flex space-x-3 justify-center'>
-              <p>Follow us:</p> 
-              <a href="."><FaTwitter className='mt-1'/></a> 
-              <a href=".."><FaFacebook className='mt-1'/></a> 
-              <a href="."><FaPinterest className='mt-1'/></a> 
-              <a href="."><FaReddit className='mt-1'/> </a>
-              <a href="."><FaYoutube className='mt-1'/> </a>
-              <a href="."><FaInstagram className='mt-1'/></a>  
-              <div className="h-[28px] w-[1px] bg-white "></div>
-            </div>
-            <div className='flex space-x-1 justify-center md:ml-3'>
-              <a href="." className='flex justify-between'>Eng  <span><FaChevronDown className="ml-1 mt-1" /></span></a>
-              <a href="." className='flex justify-between'>USD  <span><FaChevronDown className="ml-1 mt-1" /></span></a>
+      <div className=" py-[16px] text-white border-b border-[#5F6C72]">
+        <div className="container max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between">
+          {" "}
+          <p>Welcome to Clicon online eCommerce store. </p>
+          <div className="flex flex-col md:flex-row">
+            <div className="flex justify-center gap-2 items-center">
+              <p>Follow us:</p>
+              <a
+                href="."
+                className="hover:scale-125 transition-all duration-300"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href=".."
+                className="hover:scale-125 transition-all duration-300"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="."
+                className="hover:scale-125 transition-all duration-300"
+              >
+                <FaPinterest />
+              </a>
+              <a
+                href="."
+                className="hover:scale-125 transition-all duration-300"
+              >
+                <FaReddit />{" "}
+              </a>
+              <a
+                href="."
+                className="hover:scale-125 transition-all duration-300"
+              >
+                <FaYoutube />{" "}
+              </a>
+              <a
+                href="."
+                className="hover:scale-125 transition-all duration-300"
+              >
+                <FaInstagram />
+              </a>
             </div>
           </div>
+        </div>
       </div>
-      {/* devider */}
-      <div className="w-full h-[1px] bg-white"></div>
       {/* middle */}
-      <div className="flex flex-col md:flex-row md:justify-around justify-center bg-[#1B6392] align-center p-6 space-y-2">
-        <div className="flex justify-center">
-          <img src="./Icon.png" alt="." />
-          <h2 className='ml-2 mt-2 font-public-sans text-[32px] font-bold leading-[40px] tracking-[-0.02em] text-white'>Clicon</h2>
-        </div>
-        <div className="relative w-full max-w-[646px] lg:w-[646px] md:w-[400px] sm:w-full">
-          <input 
-            type="text" 
-            placeholder="Search for anything..." 
-            className="w-full h-[48px] pr-10 pl-5 py-3.5 rounded-tl-sm border focus:outline-none focus:ring-0"
-          />
-          {/* search button */}
-          <button>
-              <FontAwesomeIcon 
-              icon={faMagnifyingGlass} 
-              className="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-500"
-            />
-          </button>
-        </div>
-        <div className="flex justify-center space-x-6 text-white mt-3 text-[32px]">
-          <div className='relative'>
-            <div className='w-[20px] h-[20px] bg-slate-200 rounded-full text-[12px] text-center absolute -top-[4px] left-[16px] text-[#1B6392] flex items-center justify-center p-1' p-1>2</div>
-            {/* cart */}
-            <button className=''><FaCartShopping/></button>
+      <div className=" py-[16px] text-white">
+        <div className="container max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="flex justify-center">
+            <img src="./Icon.png" alt="." />
+            <Link
+              className="ml-2 mt-2 font-public-sans text-[32px] font-bold leading-[40px] tracking-[-0.02em] text-white"
+              to={"/MindSetGradProject/"}
+            >
+              Clicon
+            </Link>
           </div>
-          {/* heart */}
-          <button><img src="./Heart.png" alt="" /></button>
-          {/* user */}
-          <button><img src="./User.png" alt="" /></button>
+          <div className="relative w-full max-w-[646px] lg:w-[646px] md:w-[400px] sm:w-full">
+            <input
+              type="text"
+              placeholder="Search for anything..."
+              className="w-full py-[10px] px-[15px] rounded-[2px] focus:outline-none text-black"
+            />
+            {/* search button */}
+            <button>
+              <FaSearch className="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-500" />
+            </button>
+          </div>
+          <div className="flex justify-center gap-[24px] text-white text-[25px]">
+            <div className="relative">
+              <div className="w-[15px] h-[15px] bg-white rounded-full font-bold text-[12px] text-center absolute -top-1 -right-1 text-[#1B6392] flex items-center justify-center p-1">
+                {}
+              </div>
+              <Link to={"/MindSetGradProject/cart"}>
+                <BsCart3 />
+              </Link>
+            </div>
+            <Link to={"/MindSetGradProject/cart"}>
+              <IoMdHeartEmpty />
+            </Link>
+            <Link to={"/MindSetGradProject/login"}>
+              <AiOutlineUser />
+            </Link>
+          </div>
         </div>
       </div>
       {/* bottom */}
-      <div className="flex flex-col md:flex-row justify-evenly align-center mt-3 border-b-2">
-        <div className="flex p-1 space-x-3 justify-between max-w-[695px] flex-col md:flex-row md:justify-center relative">
-          {/* category */}
-          <button className='flex bg-[#F2F4F5] p-3 justify-center w-full md:w-[154px]'>All category  <span><FaChevronDown className="ml-1 mt-1" /></span></button>
+      <div className=" py-[16px] bg-white border-b-[0.5px] border-[#5F6C72]">
+        <div className="container max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="flex p-1 space-x-3 justify-between flex-col md:flex-row md:justify-center relative">
+            {/* category */}
+            <button className="flex bg-[#F2F4F5] p-3 justify-center w-full md:w-[154px]">
+              All category{" "}
+              <span>
+                <FaChevronDown className="ml-1 mt-1" />
+              </span>
+            </button>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 justify-items-center">
-            <a href="." className='flex font-public-sans text-[14px] font-normal leading-[20px] text-[#5F6C72] mt-2 space-x-1'>
-              <FaLocationDot className='text-[24px]'/> 
-              <p>Track Order</p>
-            </a>
-            <a href="." className='flex font-public-sans text-[14px] font-normal leading-[20px] text-[#5F6C72] mt-2 space-x-1'>
-              <FaArrowsRotate className='text-[24px]'/> 
-              <p>Compare</p>
-            </a>
-            <a href="." className='flex font-public-sans text-[14px] font-normal leading-[20px] text-[#5F6C72] mt-2 space-x-1'>
-              <FaHeadphones className='text-[24px]'/> 
-              <p>Customer Support</p>
-            </a>
-            <a href="." className='flex font-public-sans text-[14px] font-normal leading-[20px] text-[#5F6C72] mt-2 space-x-1'>
-              <div className="flex items-center justify-center border rounded-full h-[24px] w-[24px] p-2 border-3">
-                <FaInfo className="text-xl" />
-              </div>
-              Need Help
-            </a>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 items-center text-[#5F6C72] text-[14px]">
+              <a
+                href="."
+                className="flex leading-[20px] justify-center items-center gap-2"
+              >
+                <FaMapMarkerAlt className="text-[20px]" />
+                <p>Track Order</p>
+              </a>
+              <a
+                href="."
+                className="flex leading-[20px] justify-center items-center gap-2"
+              >
+                <FaSyncAlt className="text-[20px]" />
+                <p>Compare</p>
+              </a>
+              <a
+                href="."
+                className="flex leading-[20px] justify-center items-center gap-2"
+              >
+                <FaHeadphonesAlt className="text-[20px]" />
+                <p>Customer Support</p>
+              </a>
+              <a
+                href="."
+                className="flex leading-[20px] justify-center items-center gap-2"
+              >
+                <PiWarningCircleBold className="text-[20px]" />
+                <p>Need Help</p>
+              </a>
+            </div>
+          </div>
+          <div className="flex justify-center items-center gap-2">
+            <FaPhoneAlt className="text-[#5F6C72] text-[20px]" />
+            <p className="text-[13px]">+1-202-555-0104</p>
           </div>
         </div>
-        <div className='flex space-x-2 mt-2 justify-center'>
-          <FaPhone className='text-[#5F6C72] text-[24px]'/>
-          <p className='text-[13px]'>+1-202-555-0104</p>
-        </div>
-      </div> 
+      </div>
     </div>
-  )
+  );
 };
 
 export default Header;
