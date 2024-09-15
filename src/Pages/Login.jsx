@@ -44,13 +44,13 @@ const Login = () => {
     <div className="flex flex-col">
       {/* Header */}
       <div className="w-full bg-[#F2F4F5] py-4">
-        <div className="container max-w-screen-xl mx-auto px-4 md:px-0">
+        <div className="container max-w-screen-2xl mx-auto px-4 md:px-0">
           <p className="flex gap-2">
             <Link
               className="flex gap-2 items-center text-sm text-[#5F6C72]"
               to={"/MindSetGradProject/"}
             >
-              <GoHome />
+              <GoHome className="text-lg"/>
               <span>Home</span>
             </Link>
             <span>/</span>
@@ -62,7 +62,7 @@ const Login = () => {
       </div>
 
       {/* Form Section */}
-      <div className="container max-w-screen-xl mx-auto flex justify-center items-center py-10 md:py-24 px-4 md:px-0">
+      <div className="container max-w-screen-2xl mx-auto flex justify-center items-center py-10 md:py-24 px-4 md:px-0">
         <div className="form w-full max-w-md md:w-[424px] shadow-lg border">
           <div className="form-header font-semibold flex">
             <div className="login py-4 w-1/2 border-[#FA8232] border-b-4 text-center">
