@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { GoHome } from "react-icons/go";
-import { ErrorIcon } from "@/Utils/icons.util";
 
 const NotFound = () => {
   return (
