@@ -78,7 +78,7 @@ const ProductsSection = () => {
           <span className="text-gray-600 text-sm">
             Active Filters:{" "}
             <span className="text-black font-medium capitalize">
-              {selectedCat}
+              {selectedCat}{" / "}{"Price Range"}
             </span>
           </span>
         </div>

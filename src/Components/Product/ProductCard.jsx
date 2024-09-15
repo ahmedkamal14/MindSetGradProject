@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   return (
-    <Link to={`/MindSetGradProject/products/${product.id}`}>
+    <Link to={`/MindSetGradProject/products/${product.id}`} className="hover:scale-105 hover:shadow-xl transition-all duration-300">
       <div className="flex flex-col gap-[8px] border w-[170px] md:w-[220px] xl:w-[234px] 2xl:w-[250px] p-[16px] rounded-[3px]">
         <img src={product.thumbnail} alt={product.title} />
 
