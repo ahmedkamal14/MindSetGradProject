@@ -20,7 +20,7 @@ const cartSlice = createSlice({
   reducers: {
     // Add product to cart
     addToCart: (state, action) => {
-      const { selectedProduct, quantity, selectedSize } = action.payload;
+      const { selectedProduct, quantity } = action.payload;
       const existingItem = state.items.find(
         (item) => item.id === selectedProduct.id
       );
@@ -36,7 +36,6 @@ const cartSlice = createSlice({
           quantity: quantity,
           totalPrice: selectedProduct.price * quantity,
           image: selectedProduct.thumbnail, // Add image for display purposes
-          size: selectedSize, // Add size to the cart item
         });
       }
       state.totalQuantity += quantity;
