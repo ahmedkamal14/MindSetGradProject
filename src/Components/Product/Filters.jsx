@@ -7,9 +7,11 @@ const Filters = () => {
   const [isVisible, setIsVisible] = useState(false); // Start with filters hidden on small screens
   const [tempMinPrice, setTempMinPrice] = useState(0); // State for minimum price
   const [tempMaxPrice, setTempMaxPrice] = useState(1000); // State for maximum price
-  const { selectedCat, categories, items: products } = useSelector(
-    (state) => state.products
-  );
+  const {
+    selectedCat,
+    categories,
+    items: products,
+  } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -35,7 +37,7 @@ const Filters = () => {
     <div className="filters-container">
       {/* Toggle Button for small screens */}
       <button
-        className="lg:hidden mb-4 py-2 px-4 bg-blue-500 text-white rounded"
+        className="lg:hidden mb-4 py-2 px-4 bg-[#1B6392] text-white rounded"
         onClick={() => setIsVisible(!isVisible)}
       >
         {isVisible ? "Hide Filters" : "Show Filters"}
@@ -64,9 +66,7 @@ const Filters = () => {
               <label
                 htmlFor="All Products"
                 className={`capitalize text-sm text-[#475156] ${
-                  selectedCat === "All Products"
-                    ? "font-medium text-black"
-                    : ""
+                  selectedCat === "All Products" ? "font-medium text-black" : ""
                 }`}
               >
                 All Products

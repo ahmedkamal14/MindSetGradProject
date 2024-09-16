@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 const Sale = () => {
   return (
     <div className="w-full bg-[#191C1F]">
-      <div className="container max-w-screen-2xl flex flex-col md:flex-row justify-between mx-auto items-center py-[10px]">
+      <div className="container max-w-screen-2xl flex flex-col md:flex-row justify-between mx-auto items-center py-[10px] px-4">
         <div className="text">
           <div className="flex justify-between space-x-3">
             <div className="h-[40px] w-[74px] bg-[#F3DE6D] rotate-3 p-1.5 px-2.5 font-public-sans text-[20px] font-semibold flex justify-center items-center">
