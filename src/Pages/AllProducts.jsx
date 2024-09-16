@@ -39,6 +39,10 @@ const AllProducts = () => {
     }
   }, [dispatch, selectedCat]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center min-h-[50vh]">

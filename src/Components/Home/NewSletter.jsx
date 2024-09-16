@@ -1,39 +1,50 @@
-import { FaArrowRight} from 'react-icons/fa6';
+import { Google, Amazon, PH, Toshiba, Samsung } from "@/Utils/icons.util";
 
-const NewSletter = () => {
+const NewsLetter = () => {
+  return (
+    <div className="py-[72px] px-6 bg-[#1B6392] flex justify-center items-center">
+      <div className="container flex flex-col justify-center items-center gap-[32px] max-w-xl text-center">
+        <h1 className="text-white text-[32px] font-semibold">
+          Subscribe to our newsletter
+        </h1>
+        <p className="text-white/70">
+          Praesent fringilla erat a lacinia egestas. Donec vehicula tempor
+          libero et cursus. Donec non quam urna. Quisque vitae porta ipsum.
+        </p>
 
-    return (
-        <div className=" bg-[#1B6392] space-y-8">
-            <div className="text-center space-y-3">
-                <h2 className="text-[32px] font-bold text-white">Subscribe to our newsletter</h2>
-                <p  className="text-[16px] text-white max-w-[500px] text-center m-auto font-normal opacity-60">Praesent fringilla erat a lacinia egestas. Donec vehicula tempor libero et cursus. Donec non quam urna. Quisque vitae porta ipsum.</p>
-            </div>
+        <div className="input bg-white rounded-[3px] w-full max-w-xl px-[12px] py-[10px] flex flex-col sm:flex-row sm:gap-[12px]">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            className="flex-grow px-2 py-1 focus:outline-none"
+          />
+          <button className="bg-[#FA8232] px-[24px] py-[12px] text-white font-medium rounded-[3px] mt-2 sm:mt-0">
+            Subscribe
+          </button>
+        </div>
 
-            <div className="relative w-full max-w-[646px] lg:w-[646px] md:w-[400px] sm:w-full m-auto">
-                <input 
-                    type="text" 
-                    placeholder="Email Address" 
-                    className="w-full h-[48px] pr-10 pl-5 py-3.5 rounded-tl-sm border focus:outline-none focus:ring-0 rounded-[3px]"
-                />
-                {/* search button */}
-                <button className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white flex bg-[#FA8232] p-2 mt-1/2 rounded-[2px]">
-                    <p>Subscribe</p>
-                    <FaArrowRight className="ml-2 mt-1"/>
-                </button>
-                </div>
+        <div className="logos pt-6 border-t border-white/20 w-full max-w-xl mx-auto flex flex-wrap justify-center gap-[24px]">
+          <div className="w-1/5 sm:w-auto">
+            <Google className="w-12 h-12" />
+          </div>
+          <div className="w-1/5 sm:w-auto">
+            <Amazon className="w-12 h-12" />
+          </div>
+          <div className="w-1/5 sm:w-auto">
+            <PH className="w-12 h-12" />
+          </div>
+          <div className="w-1/5 sm:w-auto">
+            <Toshiba className="w-12 h-12" />
+          </div>
+          <div className="w-1/5 sm:w-auto">
+            <Samsung className="w-12 h-12" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-                {/* devider */}
-                <div className='max-w-[424px] h-[1px] bg-white opacity-15 m-auto'></div>
-
-                <div className='flex max-w-[552px] m-auto justify-between opacity-60 flex-col md:flex-row items-center`'>
-                    <img src="./google.png" alt="" className='max-w-[72px] max-h-[72px] m-auto' />
-                    <img src="./Frame.png" alt="" className='max-w-[72px] max-h-[72px] m-auto' />
-                    <img src="./philips.png" alt="" className='max-w-[72px] max-h-[72px] m-auto' />
-                    <img src="./toshiba.png" alt=""  className='max-w-[72px] max-h-[72px] m-auto'/>
-                    <img src="./samsung.png" alt="" className='max-w-[72px] max-h-[72px] m-auto' />
-                </div>
-            </div>
-    )
-}
-
-export default NewSletter
+export default NewsLetter;

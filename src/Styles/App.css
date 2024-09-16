@@ -59,3 +59,64 @@ input[type="radio"]:checked::before {
   position: absolute;
   top: -6px;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%; /* Set the height to something reasonable */
+  margin-left: !important 0px;
+}
+
+.swiper {
+  margin-left: 0 !important;
+  /* Apply any other necessary layout corrections */
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #1b6392;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: #1b6392;
+  fill: none;
+  stroke-dasharray: calc(2 * 3.1416 * 20); /* Correct circle circumference */
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  transform: rotate(-90deg);
+}
+
+/* Target Swiper pagination container */

@@ -45,7 +45,7 @@ const Cart = () => {
               <h1 className="text-[18px] font-medium">Shopping Cart</h1>
             </div>
 
-            <div className="tags bg-[#F2F4F5] w-full py-[10px] px-[16px] md:px-[24px] text-[#475156] text-[12px] font-medium flex gap-7 sm:gap-4 md:gap-[24px]">
+            <div className="tags bg-[#F2F4F5] w-full py-[10px] px-[16px] md:px-[24px] text-[#475156] text-[12px] font-medium flex gap-8 sm:gap-4">
               <h1 className="w-full md:w-1/2 lg:w-2/5">PRODUCTS</h1>
               <h1 className="w-1/6">PRICE</h1>
               <h1 className="w-1/4 md:w-1/6">QUANTITY</h1>

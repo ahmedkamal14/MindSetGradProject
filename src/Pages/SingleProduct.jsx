@@ -17,6 +17,7 @@ import { FaPlus } from "react-icons/fa6";
 import { AiOutlineMinus } from "react-icons/ai";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import ProductCard from "@/Components/Product/ProductCard";
+import { toast } from "react-toastify";
 const SingleProduct = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -46,6 +47,8 @@ const SingleProduct = () => {
 
   const handleAddToCart = () => {
     dispatch(addToCart({ selectedProduct, quantity }));
+    setQuantity(1);
+    toast.success("Added to Cart");
   };
 
   if (isLoading) {

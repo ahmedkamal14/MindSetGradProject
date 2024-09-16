@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom";
 import Footer from "@/Components/Footer";
 import Sale from "@/Components/Sale";
 import Header from "./Components/Header";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <Header />
       <Outlet />
       <Footer />
+      <ToastContainer />
     </>
   );
 }
