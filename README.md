@@ -2,6 +2,7 @@
 
 This repository contains **MindSetGradProject**, a modern e-commerce website designed to sell a variety of products. It offers a sleek, user-friendly interface that allows customers to browse and purchase items with ease. The project integrates dynamic product listings, advanced filtering options, and a smooth shopping cart experience, all while ensuring responsiveness across all devices.
 
+![MindSetGradProject Preview](snip.png)
 ![MindSetGradProject Preview](snip1.png)
 ![MindSetGradProject Preview](snip2.png)
 
