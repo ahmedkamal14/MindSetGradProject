@@ -95,7 +95,7 @@ const Cart = () => {
             <div className="prices flex flex-col gap-[12px] border-b-2 pb-6">
               <div className="flex justify-between items-center">
                 <span className="text-[#5F6C72]">Sub-total</span>
-                <span className="font-medium">${totalPrice}</span>
+                <span className="font-medium">${Math.round(totalPrice)}</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-[#5F6C72]">Shipping</span>
@@ -114,7 +114,9 @@ const Cart = () => {
             <div className="totalPrice">
               <div className="flex justify-between items-center font-medium">
                 <span>Total</span>
-                <span>${totalPrice + delivery + Math.round(tax)}</span>
+                <span>
+                  ${Math.round(totalPrice) + delivery + Math.round(tax)}
+                </span>
               </div>
             </div>
 
